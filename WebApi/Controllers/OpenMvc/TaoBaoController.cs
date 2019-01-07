@@ -40,7 +40,6 @@ namespace WebApi.Controllers
 
         public string RequestApi()
         {
-
             string session = Session["access_token"].ToString();
             IDictionary<string, string> param = new Dictionary<string, string>();
             param.Add("item_id", "1234L");

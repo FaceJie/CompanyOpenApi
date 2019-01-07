@@ -104,4 +104,10 @@ namespace APIHelperLib
         public string Discription { get; set; }
         public bool IsChecked { get; set; }
     }
+
+    public class MsgModel
+    {
+        public bool scu { get; set; }
+        public string msg { get; set; }
+    }
 }

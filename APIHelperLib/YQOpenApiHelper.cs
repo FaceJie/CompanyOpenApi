@@ -261,10 +261,4 @@ namespace APIHelperLib
         /// </summary>
         public int Exp { get; set; }
     }
-
-    public class MsgModel
-    {
-        public bool scu { get; set; }
-        public string msg { get; set; }
-    }
 }

@@ -119,6 +119,19 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\banner\ban1.jpg" />
+    <Content Include="Content\images\banner\ban2.jpg" />
+    <Content Include="Content\images\banner\ban3.jpg" />
+    <Content Include="Content\images\banner\ban4.jpg" />
+    <Content Include="Content\images\banner\banner1.jpg" />
+    <Content Include="Content\images\banner\banner2.jpg" />
+    <Content Include="Content\images\connection.png" />
+    <Content Include="Content\images\eg.png" />
+    <Content Include="Content\images\footer.jpg" />
+    <Content Include="Content\images\mesegess.png" />
+    <Content Include="Content\images\order.png" />
+    <Content Include="Content\images\orders.png" />
+    <Content Include="Content\images\tmbg-white.png" />
     <Content Include="Content\img\diy\1_close.png" />
     <Content Include="Content\img\diy\1_open.png" />
     <Content Include="Content\img\diy\2.png" />
@@ -136,6 +149,7 @@
     <Content Include="Content\img\metro.png" />
     <Content Include="Content\img\zTreeStandard.gif" />
     <Content Include="Content\img\zTreeStandard.png" />
+    <Content Include="Content\loginStyle.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
@@ -1145,10 +1159,12 @@
     <Content Include="Scripts\Custom\TableOperation.js" />
     <Content Include="Scripts\Custom\User\User.js" />
     <Content Include="Scripts\Custom\WinMsg.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
     <Content Include="Scripts\jquery-ui-1.8.24.js" />
     <Content Include="Scripts\jquery-ui-1.8.24.min.js" />
+    <Content Include="Scripts\jquery.gradientify.min.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -1179,7 +1195,6 @@
     <Compile Include="Content\Filter\IsAjaxAttribute.cs" />
     <Compile Include="Content\Filter\JwtAuthActionFilter.cs" />
     <Compile Include="Content\Filter\LayoutAttribute.cs" />
-    <Compile Include="Content\Model\MsgModel.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\OpenApi\FZApiManagerController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
@@ -1223,6 +1238,10 @@
     <ProjectReference Include="..\APIHelperLib\APIHelperLib.csproj">
       <Project>{e7a16a16-aaf2-43b6-ab9b-6b51aead97e6}</Project>
       <Name>APIHelperLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\APIModel\APIModel.csproj">
+      <Project>{0a2b0d8b-16ae-4b18-b4fd-06e3275a225b}</Project>
+      <Name>APIModel</Name>
     </ProjectReference>
     <ProjectReference Include="..\Unitils\Unitils.csproj">
       <Project>{6662d344-c7f1-4698-8977-df249200fe41}</Project>

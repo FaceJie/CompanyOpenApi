@@ -28,42 +28,17 @@
         <!-- Sidebar Menu -->
         <ul class="sidebar-menu">
             <li class="active"><a href="/Common/Home/Index"><i class="fa fa-home"></i> <span>主页</span></a></li>
-            @*<li class="header">菜单</li>*@
-            <!-- Optionally, you can add icons to the links -->
-            @*<li class="active"><a href="#"><i class="fa fa-link"></i> <span>Link</span></a></li>
-                <li><a href="#"><i class="fa fa-link"></i> <span>Another Link</span></a></li>
-                <li class="treeview">
-                    <a href="#"><i class="fa fa-windows"></i> <span>Multilevel</span> <i class="fa fa-angle-left pull-right"></i></a>
-                    <ul class="treeview-menu">
-                        <li><a href="#">Link in level 2</a></li>
-                        <li><a href="#">Link in level 2</a></li>
-                    </ul>
-                </li>*@
-
-            @foreach (var item in Model)
-            {
-                <li class="treeview">
-                    <a href="#">
-                        <i class="fa fa-windows"></i> <span>@item.Name</span>
-                        <i class="fa fa-angle-left pull-right"></i>
-                    </a>
-                    @*@if (item.ChildModules.Count > 0)
-                        {*@
-                    <ul class="treeview-menu">
-                        @{
-                //IList<Module> orderChild = item.ChildModules.OrderBy(c => c.Code).ToList();
-                foreach (var child in item.ChildModules)
-                {
-                    <li><a href="@Url.Content(@child.LinkUrl)">@child.Name</a></li>
-                }
-                        }
-                        @*<li><a href="#">Link in level 2</a></li>
-                            <li><a href="#">Link in level 2</a></li>*@
-                    </ul>
-                    @*}*@
-                </li>
-
-            }
+          
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-windows"></i> <span>系统管理</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+               
+                <ul class="treeview-menu">
+                    <li><a href="#">我的权限</a></li>
+                </ul>
+            </li>
         </ul><!-- /.sidebar-menu -->
     </section>
     <!-- /.sidebar -->

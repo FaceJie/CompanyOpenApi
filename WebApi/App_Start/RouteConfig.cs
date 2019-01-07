@@ -15,7 +15,7 @@ namespace WebApi
             string[] NS;
             NS = "WebApi.Controllers.OpenMvc".Split('|');
             routes.MapRoute(
-              "OpenMvc", // 路由名称  
+              "OpenMvc", 
               "OpenMvc/{controller}/{action}/{id}",
               new { controller = "TaoBao", action = "Index", id = UrlParameter.Optional }, NS
             );

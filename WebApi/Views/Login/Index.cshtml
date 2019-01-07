@@ -1,6 +1,117 @@
-﻿
-@{
-    ViewBag.Title = "Index";
+﻿@{
+    Layout = null;
 }
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>自由行管理系统登录</title>
+
+
+    <link href="~/Scripts/AdminLTE2.3.0/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Scripts/Toastr/toastr.min.css" rel="stylesheet" />
+    <link href="~/Content/loginStyle.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="formCenter">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-4 col-xs-offset-0 col-md-offset-4 loginFormBox">
+                    <div class="col-xs-12 col-md-12 loginForm">
+                        <span class="heading col-xs-12 col-md-12">
+                            <img src="~/Content/images/eg.png" />
+                        </span>
+                        <form role="form" class="form-horizontal">
+                            <div class="form-group">
+                                <div class="input-group col-xs-12 col-md-8 col-md-offset-2">
+                                    <input class="form-control" name="userName" type="text" placeholder="请输入密码" data-validate="required:请输入密码" />
+                                    <span class="input-group-addon glyphicon glyphicon-user"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group col-xs-12 col-md-8 col-md-offset-2">
+                                    <input class="form-control" name="userPwd" type="password" placeholder="请输入密码" data-validate="required:请输入密码" />
+                                    <span class="input-group-addon 	glyphicon glyphicon-lock"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group col-xs-12 col-md-8 col-md-offset-2">
+                                    <button type="button" id="InsertInfo" class="btn btn-primary btn-sm col-xs-12 col-md-12">登录</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery.gradientify.min.js"></script>
+    <script src="~/Scripts/Toastr/toastr.min.js"></script>
+    <script>
+        $(function () {
+            $("body").gradientify({
+                gradients: [
+					{ start: [49, 76, 172], stop: [242, 159, 191] },
+					{ start: [255, 103, 69], stop: [240, 154, 241] },
+					{ start: [33, 229, 241], stop: [235, 236, 117] }
+                ]
+            });
+            toastr.options.positionClass = 'toast-bottom-center';
+            $("input[name=userName]").focus(function () {
+                $("input[name=userName]").val('');
+                $("input[name=userName]").css({ 'color': '#ADADAD' });
+            })
+            $("input[name=userPwd]").focus(function () {
+                $("input[name=userPwd]").val('');
+                $("input[name=userPwd]").css({ 'color': '#ADADAD' });
+            })
+            $("#InsertInfo").on("click", function () {
+                var username = $("input[name=userName]").val();
+                var password = $("input[name=userPwd]").val();
+                if (username == "" || username == "用户名不能为空") {
+                    $('input[name=userName]').parent('.input-group').stop()
+                    .animate({ left: "-10px" }, 100).animate({ left: "10px" }, 100)
+                    .animate({ left: "-10px" }, 100).animate({ left: "10px" }, 100)
+                    .animate({ left: "0px" }, 100)
+                    .addClass("required");
+                    $("input[name=userName]").val('用户名不能为空');
+                    $("input[name=userName]").css({ 'color': 'red' });
+                    return;
+                }
+                if (password == "" || password == "密码不能为空") {
+                    $('input[name=userPwd]').parent('.input-group').stop()
+                   .animate({ left: "-10px" }, 100).animate({ left: "10px" }, 100)
+                   .animate({ left: "-10px" }, 100).animate({ left: "10px" }, 100)
+                   .animate({ left: "0px" }, 100)
+                   .addClass("required");
+                    $("input[name=userPwd]").val('密码不能为空');
+                    $("input[name=userPwd]").css({ 'color': 'red' });
+                    return;
+                }
+                $.ajax({
+                    type: 'get',
+                    dataType: 'json',
+                    data: { userName: username, userPwd: password },
+                    url: '/Login/CheckLogion',
+                    success: function (data) {
+                        if (data.scu) {
+                            window.location.href = "OpenMvc/TaoBao/Index";
+                        } else {
+                            toastr.error(data.msg);
+                        }
+                    },
+                    error: function (data) {
+                        toastr.warning('网络出错！');
+                    }
+                });
+            })
+        })
+    </script>
+</body>
+</html>
+
 
 

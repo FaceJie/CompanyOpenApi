@@ -9,7 +9,6 @@ using System.Web;
 using System.Web.Http;
 using System.Web.Http.Controllers;
 using System.Web.Http.Filters;
-using WebApi.Content.Model;
 
 namespace WebApi.Content.Filter
 {

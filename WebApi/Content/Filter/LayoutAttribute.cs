@@ -17,7 +17,7 @@ namespace WebApi.Content.Filter
             //((ViewResult)filterContext.Result).ViewBag.LoginName = user.LoginName;
 
             //左侧菜单
-            ((ViewResult)filterContext.Result).ViewBag.SidebarMenuModel = InitSidebarMenu();
+            //((ViewResult)filterContext.Result).ViewBag.SidebarMenuModel = InitSidebarMenu();
 
 
         }
