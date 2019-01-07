@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIHelperLib", "APIHelperLib\APIHelperLib.csproj", "{E7A16A16-AAF2-43B6-AB9B-6B51AEAD97E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "WebApi\WebApi.csproj", "{3FC224B8-A1D0-40BB-81E2-4F6627596924}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unitils", "Unitils\Unitils.csproj", "{6662D344-C7F1-4698-8977-DF249200FE41}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E7A16A16-AAF2-43B6-AB9B-6B51AEAD97E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7A16A16-AAF2-43B6-AB9B-6B51AEAD97E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7A16A16-AAF2-43B6-AB9B-6B51AEAD97E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7A16A16-AAF2-43B6-AB9B-6B51AEAD97E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FC224B8-A1D0-40BB-81E2-4F6627596924}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FC224B8-A1D0-40BB-81E2-4F6627596924}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FC224B8-A1D0-40BB-81E2-4F6627596924}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FC224B8-A1D0-40BB-81E2-4F6627596924}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6662D344-C7F1-4698-8977-DF249200FE41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6662D344-C7F1-4698-8977-DF249200FE41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6662D344-C7F1-4698-8977-DF249200FE41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6662D344-C7F1-4698-8977-DF249200FE41}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
